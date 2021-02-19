@@ -5,7 +5,7 @@
 #include <QDialog>
 #include <QStyledItemDelegate>
 
-
+// hi from commons
 class QKeyEvent;
 class ExtraSizeDelegate : public QStyledItemDelegate
 {
