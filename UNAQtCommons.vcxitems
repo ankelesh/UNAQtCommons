@@ -22,6 +22,13 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.cpp" />
@@ -37,6 +44,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.h" />
