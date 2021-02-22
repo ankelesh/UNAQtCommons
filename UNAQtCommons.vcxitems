@@ -19,6 +19,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\BigButtonsSpinbox.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
@@ -41,6 +42,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\BigButtonsSpinbox.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.h" />
