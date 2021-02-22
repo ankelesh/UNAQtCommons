@@ -1,4 +1,4 @@
-#include "debugtrace.h"
+#include "submodules/UNAQtCommons/debug/debugtrace.h"
 #include <QFile>
 #include <QDir>
 #include <cstdlib>

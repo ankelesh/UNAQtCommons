@@ -14,14 +14,20 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)debug\debugtrace.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)debug\debugtrace.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
