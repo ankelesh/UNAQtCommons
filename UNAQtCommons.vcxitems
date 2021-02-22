@@ -22,6 +22,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\SoundEffectPlayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\WinCEUnpackWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.h" />
@@ -32,5 +37,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\SoundEffectPlayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\WinCEUnpackWrapper.h" />
   </ItemGroup>
 </Project>

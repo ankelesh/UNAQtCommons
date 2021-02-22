@@ -5,9 +5,9 @@
 #include "submodules/UNAQtCommons/debug/debugtrace.h"
 #endif
 #ifdef Q_OS_ANDROID
-#include "Wrappers/QBroadcastCatcher.h"
+#include "submodules/UNAQtCommons/wrappers/Platform/Android/QBroadcastCatcher.h"
 #endif
-#include "Wrappers/SoundWrappers/SoundEffectPlayer.h"
+
 
 
 QKeySequence _initiateSequence(QChar ch)
@@ -56,7 +56,7 @@ bool BarcodeObserver::eventFilter(QObject* object, QEvent* event)
 	
 }
 
-bool BarcodeObserver::_testPressureForBarcode(QKeyEvent * ev, QObject* target)
+bool BarcodeObserver::_testPressureForBarcode(QKeyEvent * ev, QObject* /*target*/)
 {
 	if (prefixFound)
 	{
@@ -106,7 +106,7 @@ bool BarcodeObserver::_testReleaseForBarcode(QEvent* ev)
 		return false;
 }
 
-bool BarcodeObserver::_testGlobalHotkeyPress(QKeyEvent* ev, QObject* target)
+bool BarcodeObserver::_testGlobalHotkeyPress(QKeyEvent* ev, QObject* /*target*/)
 {
 	switch (ev->key())
 	{
@@ -116,7 +116,7 @@ bool BarcodeObserver::_testGlobalHotkeyPress(QKeyEvent* ev, QObject* target)
 	}
 }
 
-bool BarcodeObserver::_testGlobalHotkeyRelease(QKeyEvent* ev, QObject* target)
+bool BarcodeObserver::_testGlobalHotkeyRelease(QKeyEvent* ev, QObject* /*target*/)
 {
 	switch (ev->key())
 	{
@@ -240,7 +240,7 @@ void BarcodeObserver::init()
 	qApp->installEventFilter(instanse());
 }
 
-void BarcodeObserver::handleIntentBarcode(uint nhash, QString iname, QString barcode)
+void BarcodeObserver::handleIntentBarcode(uint /*nhash*/, QString iname, QString barcode)
 {
 #ifdef DEBUG
 	detrace_METHEXPL("obtained barcode by intent " << iname << " : " << barcode);
