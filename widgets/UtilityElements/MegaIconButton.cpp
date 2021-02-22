@@ -41,6 +41,15 @@ MegaIconButton::MegaIconButton(QIcon ic, const double imageCoef, const QString t
 #endif
 }
 
+MegaIconButton::MegaIconButton(QString text, QWidget* parent)
+	: QPushButton(text, parent), imageCoefficient(0.6)
+{
+	setMinimumHeight(calculateAdaptiveButtonHeight());	//	Now adaptive height is used by default
+#ifdef Q_OS_WINCE
+	setFont(AppFonts->makeFont(0.7));
+#endif
+}
+
 void MegaIconButton::setIcon(QIcon icon)
 {
 	ico = icon;
