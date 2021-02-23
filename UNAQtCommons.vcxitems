@@ -15,7 +15,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)debug\debugtrace.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\DateTimeControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\LabelControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\QuantityControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\StringControl.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.cpp" />
@@ -38,7 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)debug\debugtrace.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\DateTimeControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\LabelControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\QuantityControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\StringControl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.h" />
