@@ -1,4 +1,4 @@
-#include "submodules/UNAQtCommons/widgets/ControlsWidgets/QuantityControl.h"
+#include "QuantityControl.h"
 #include "widgets/utils/ElementsStyles.h"
 //#define DEBUG
 #ifdef Q_OS_ANDROID

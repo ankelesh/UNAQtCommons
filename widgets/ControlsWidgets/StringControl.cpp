@@ -1,4 +1,4 @@
-#include "submodules/UNAQtCommons/widgets/ControlsWidgets/StringControl.h"
+#include "StringControl.h"
 #include "widgets/utils/ElementsStyles.h"
 #include <QLineEdit>
 #include <QLabel>

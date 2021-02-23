@@ -2,7 +2,7 @@
 #include "ControlTranslator.h"
 //#define DEBUG
 #ifdef DEBUG
-#include "submodules/UNAQtCommons/debug/debugtrace.h"
+#include <debug/debugtrace.h>
 #endif
 #include <QWidget>
 
