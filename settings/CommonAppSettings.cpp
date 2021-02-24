@@ -54,6 +54,9 @@ void CommonAppSettings::_save(p_QSettings settings)
 	settings->beginGroup("sound");
 	settings->setValue("notificationsVolume", notificationsVolume);
 	settings->endGroup();
+	settings->beginGroup("network");
+	settings->setValue("timeoutInt", timeoutInt);
+	settings->endGroup();
 }
 
 void CommonAppSettings::_load(p_QSettings settings)
@@ -86,6 +89,9 @@ void CommonAppSettings::_load(p_QSettings settings)
 	settings->beginGroup("sound");
 	notificationsVolume = settings->value("notificationsVolume", QVariant(100U)).toUInt();
 	settings->endGroup();
+	settings->beginGroup("network");
+	settings->setValue("timeoutInt", timeoutInt);
+	settings->endGroup();
 	setTranslator();
 }
 
@@ -98,7 +104,7 @@ CommonAppSettings::CommonAppSettings(QString ru, QString ro, QString en) :
 	scanPrefix(52), scanSuffix(10), language(),
 	qt_translator(), fontMinHeight(10), fontMaxHeight(20),
 	fontPercent(0.01), labelPrinterName(), lastPrinterBTMAC(), lastPrinterBTUUID(),
-	notificationsVolume()
+	notificationsVolume(), timeoutInt(10000)
 {
 }
 

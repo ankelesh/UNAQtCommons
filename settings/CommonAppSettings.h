@@ -44,6 +44,8 @@ public:
 	QString lastPrinterBTUUID;
 
 	unsigned int notificationsVolume;
+	// network timeouts
+	int timeoutInt;
 
 	void setTranslator();				//	Sets translator. Can be used any time
 	void save();						//	Forse save
