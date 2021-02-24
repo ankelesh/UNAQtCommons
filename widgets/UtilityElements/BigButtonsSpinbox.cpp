@@ -66,7 +66,7 @@ BigButtonsSpinbox::BigButtonsSpinbox(spintype type, QWidget* parent, double adap
 
 
 	coreSpinbox->setButtonSymbols(QAbstractSpinBox::NoButtons);
-	coreSpinbox->setFixedHeight(calculateAdaptiveButtonHeight(adaptH * 0.6666));
+	coreSpinbox->setFixedHeight(calculateAdaptiveHeight(adaptH * 0.6666));
 	coreSpinbox->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Maximum));
 	coreSpinbox->installEventFilter(keyFilter);
 	coreSpinbox->setAlignment(Qt::AlignCenter);
@@ -80,14 +80,14 @@ BigButtonsSpinbox::BigButtonsSpinbox(spintype type, QWidget* parent, double adap
 	{
 		buttonUp->setIcon(QIcon(":/res/uparrow.png"));
 		buttonDown->setIcon(QIcon(":/res/downarrow.png"));
-		buttonUp->setMinimumHeight(calculateAdaptiveButtonHeight(adaptH));
-		buttonDown->setMinimumHeight(calculateAdaptiveButtonHeight(adaptH));
+		buttonUp->setMinimumHeight(calculateAdaptiveHeight(adaptH));
+		buttonDown->setMinimumHeight(calculateAdaptiveHeight(adaptH));
 		buttonDown->setFocusPolicy(Qt::NoFocus);
 		buttonUp->setFocusPolicy(Qt::NoFocus);
 		buttonUp->setStyleSheet(UP_SPINBOX_STYLESHEET);
 		buttonDown->setStyleSheet(DOWN_SPINBOX_STYLESHEET);
 	}
-	infoLabel->setFixedHeight(calculateAdaptiveButtonHeight(adaptH / 3));
+	infoLabel->setFixedHeight(calculateAdaptiveHeight(adaptH / 3));
 	infoLabel->setFont(AppFonts->makeFont(0.45));
 	infoLabel->setAlignment(Qt::AlignCenter);
 	infoLabel->setStyleSheet("QLabel{border: 1px solid black;}");

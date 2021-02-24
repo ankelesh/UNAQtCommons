@@ -41,8 +41,8 @@ LoginPassDialog::LoginPassDialog(QString& login_link, QString& pass_link, QWidge
 	passField->setEchoMode(QLineEdit::Password);
 	okButton->setIcon(QIcon(":/res/submit.png"));
 	okButton->setStyleSheet(COMMIT_BUTTONS_STYLESHEET);
-	okButton->setFixedHeight(calculateAdaptiveButtonHeight(0.08));
-	cancelButton->setFixedHeight(calculateAdaptiveButtonHeight(0.08));
+	okButton->setFixedHeight(calculateAdaptiveHeight(0.08));
+	cancelButton->setFixedHeight(calculateAdaptiveHeight(0.08));
 	cancelButton->setStyleSheet(BACK_BUTTONS_STYLESHEET);
 	cancelButton->setIcon(QIcon(":/res/back.png"));
 	setStyleSheet("QDialog {border: 1px solid black;}");
@@ -153,13 +153,13 @@ ErrorMessageDialog::ErrorMessageDialog(const QString header,
 	{
         errorImage->setPixmap(icon.pixmap(calculateAdaptiveSize(0.1, 0.3)));
 	}
-    errorImage->setFixedHeight(calculateAdaptiveButtonHeight(0.1));
+    errorImage->setFixedHeight(calculateAdaptiveHeight(0.1));
 	errorImage->setFixedWidth(errorImage->pixmap()->width());
 	okButton->setIcon(QIcon(":/res/submit.png"));
 	okButton->setText(tr("OK"));
-    okButton->setFixedHeight(calculateAdaptiveButtonHeight(0.06));
+    okButton->setFixedHeight(calculateAdaptiveHeight(0.06));
 	okButton->setStyleSheet(OK_BUTTONS_STYLESHEET);
-    infoButton->setFixedHeight(calculateAdaptiveButtonHeight(0.06));
+    infoButton->setFixedHeight(calculateAdaptiveHeight(0.06));
 	infoButton->setIcon(QIcon(":/downarrow.png"));
 	infoButton->setText(tr("info"));
 	stackTrace->setText(stack);

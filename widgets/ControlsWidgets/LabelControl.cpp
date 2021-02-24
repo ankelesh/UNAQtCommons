@@ -35,7 +35,7 @@ LabelControl::LabelControl(QString str, QWidget* Parent)
 	innerLabel(new unfocusableLabel(str, parent))
 {
 	innerLabel->setAlignment(Qt::AlignCenter);
-	innerLabel->setMinimumHeight(calculateAdaptiveButtonHeight(0.1));
+	innerLabel->setMinimumHeight(calculateAdaptiveHeight(0.1));
 	innerLabel->setFont(FontAdapter::makeFont(1.3));
 #ifdef QT_VERSION5X
 	QObject::connect(innerLabel, &unfocusableLabel::returnPressed, this, &LabelControl::subcontrolEditingFinished);
