@@ -1,6 +1,6 @@
 #include "FTRCOMPrinterWrapper.h"
 #ifdef FTR_COM
-#include "legacy/3drparty/tty/tty.h"
+#include "tty/tty.h"
 #endif
 #ifdef DEBUG
 #include <debug/debugtrace.h>

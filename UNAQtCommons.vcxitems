@@ -38,6 +38,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\tty\tty.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.cpp" />
@@ -71,6 +72,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\tty\tty.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.h" />
