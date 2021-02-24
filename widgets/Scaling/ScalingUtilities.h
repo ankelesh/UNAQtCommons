@@ -92,12 +92,15 @@ public:
 	FontAdapter(int minheight, int maxheight, double minimumFontPercent);
 	void reset(int mh, int Mh, double mfp);
 	int howMuchCharacterFitsIntoScreen();
+	int getMinFontHeight() { return minheight; }
+	int getMaxFontHeight() { return maxheight; }
+	int getFontPercent() { return minimumFontPercent; }
 
 	static FontAdapter* instanse();
 	static const QFont* general();
 	// creates scaled font by using adapter. Extra percents are relational to calculated minheight
 	static QFont makeFont(double extrapercents);
-	static QFont makeCustomFont(double onlyPercents);
-	QFont makeIndependentFont(int min, int max, int perc);
+	QFont makeCustomFont(double onlyPercents);
+	static QFont makeIndependentFont(int min, int max, int perc);
 	static QString breakStringToFitScreen(QString src, const QFontMetrics& metrics, double percent = 1.0, int* breaks = Q_NULLPTR);
 };

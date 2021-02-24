@@ -110,12 +110,12 @@ QFont FontAdapter::makeCustomFont(double onlyPercents)
 QFont FontAdapter::makeIndependentFont(int min, int max, int perc)
 {
 	double currentHeight = GEOMETRY_SOURCE->availableGeometry().height();
-	currentHeight *= minimumFontPercent;
-	if (currentHeight < minheight)
-		currentHeight = minheight;
+	currentHeight *= perc;
+	if (currentHeight < min)
+		currentHeight = min;
 	else
-		if (currentHeight > maxheight)
-			currentHeight = maxheight;
+		if (currentHeight > max)
+			currentHeight = max;
 	return QFont("Times new Roman", int(currentHeight));
 }
 QString FontAdapter::breakStringToFitScreen(QString src, const QFontMetrics& metrics, double percent, int* breaks)
