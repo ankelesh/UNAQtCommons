@@ -8,9 +8,9 @@
 #include <QTimer>
 #endif
 #ifdef DEBUG
-#include "submodules/UNAQtCommons/debug/debugtrace.h"
+#include <debug/debugtrace.h>
 #endif
-#include "widgets/utils/GlobalAppSettings.h"
+#include <settings/CommonAppSettings.h>
 bool AndroidBluetoothPrinterWrapper::_isValid() const
 {
 #ifdef Q_OS_ANDROID
@@ -152,8 +152,8 @@ AndroidBluetoothPrinterWrapper::~AndroidBluetoothPrinterWrapper()
 #ifdef Q_OS_ANDROID
     if (mainSocket->state() == QBluetoothSocket::ConnectedState)
     {
-        AppSettings->lastPrinterBTMAC = targetService.device().address().toString();
-        AppSettings->lastPrinterBTUUID = targetService.serviceUuid().toString();
+        CommonSettings->lastPrinterBTMAC = targetService.device().address().toString();
+        CommonSettings->lastPrinterBTUUID = targetService.serviceUuid().toString();
     }
     mainSocket->close();
     mainSocket->disconnectFromService();

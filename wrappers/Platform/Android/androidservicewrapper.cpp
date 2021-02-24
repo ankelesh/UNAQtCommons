@@ -7,7 +7,7 @@
 #include <QtAndroid>
 #include <QVariant>
 #endif
-#include "submodules/UNAQtCommons/widgets/UtilityElements/ExtendedDialogs.h"
+#include <widgets/UtilityElements/ExtendedDialogs.h>
 AndroidServiceWrapper::AndroidServiceWrapper()
 {
 #ifdef Q_OS_ANDROID

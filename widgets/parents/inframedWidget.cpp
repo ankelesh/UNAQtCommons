@@ -1,9 +1,9 @@
 #include "inframedWidget.h"
 //#define DEBUG
 #ifdef DEBUG
-#include "submodules/UNAQtCommons/debug/debugtrace.h"
+#include <debug/debugtrace.h>
 #endif
-#include "submodules/UNAQtCommons/barcodeHandling/BarcodeObserver.h"
+#include <barcodeHandling/BarcodeObserver.h>
 #include <QTime>
 using namespace filters;
 inframedWidget::inframedWidget(QWidget* parent)

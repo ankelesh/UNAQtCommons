@@ -17,6 +17,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)debug\debugtrace.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)settings\CommonAppSettings.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)debug\debugtrace.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)settings\CommonAppSettings.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.h" />

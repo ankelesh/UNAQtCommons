@@ -1,6 +1,6 @@
 #include "ModernQtSoundWrapper.h"
 #ifdef QT_VERSION5X
-#include "widgets/utils/GlobalAppSettings.h"
+#include <settings/CommonAppSettings.h>
 
 void ModernQtSoundWrapper::_play(QString sourceName)
 {
@@ -17,7 +17,7 @@ int ModernQtSoundWrapper::_prepare(QString sourceName)
 
 void ModernQtSoundWrapper::_play()
 {
-    singleShotBuffer->setVolume(AppSettings->notificationsVolume);
+    singleShotBuffer->setVolume(CommonSettings->notificationsVolume);
 	singleShotBuffer->play();
 }
 
@@ -36,7 +36,7 @@ void ModernQtSoundWrapper::_play(int which)
 	if (which >= 0 && which < effects.count())
 	{
 		int st = effects.at(which)->status();
-        effects[which]->setVolume(AppSettings->notificationsVolume);
+        effects[which]->setVolume(CommonSettings->notificationsVolume);
 		effects.at(which)->play();
 	}
 }

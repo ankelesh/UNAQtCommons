@@ -7,7 +7,7 @@
 #include <QToolButton>
 #include <QStyle>
 #include "MegaIconButton.h"
-#include "widgets/utils/GlobalAppSettings.h"
+#include <settings/CommonAppSettings.h>
 #include "widgets/utils/ElementsStyles.h"
 #include "ExtendedLabels.h"
 #include <QPaintEvent>

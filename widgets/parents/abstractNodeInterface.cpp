@@ -1,6 +1,6 @@
 #include "abstractNodeInterface.h"
 #ifdef DEBUG
-#include "submodules/UNAQtCommons/debug/debugtrace.h"
+#include <debug/debugtrace.h>
 #endif
 
 bool abstractNode::_hideCurrent(inframedWidget* replacement)

@@ -1,11 +1,11 @@
 #include "BarcodeObserver.h"
 #include <qapplication.h>
-#include "widgets/utils/GlobalAppSettings.h"
+#include <settings/CommonAppSettings.h>
 #ifdef DEBUG
-#include "submodules/UNAQtCommons/debug/debugtrace.h"
+#include <debug/debugtrace.h>
 #endif
 #ifdef Q_OS_ANDROID
-#include "submodules/UNAQtCommons/wrappers/Platform/Android/QBroadcastCatcher.h"
+#include <wrappers/Platform/Android/QBroadcastCatcher.h>
 #endif
 
 
@@ -230,7 +230,7 @@ BarcodeObserver* BarcodeObserver::instanse()
 {
 	if (_instanse == Q_NULLPTR)
 	{
-		_instanse = new BarcodeObserver(QChar(AppSettings->scanPrefix), QChar(AppSettings->scanSuffix) , Q_NULLPTR);
+		_instanse = new BarcodeObserver(QChar(CommonSettings->scanPrefix), QChar(CommonSettings->scanSuffix) , Q_NULLPTR);
 	}
 	return _instanse;
 }

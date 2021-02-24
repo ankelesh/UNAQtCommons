@@ -1,5 +1,5 @@
 #include "ScalingUtilities.h"
-#include "widgets/utils/GlobalAppSettings.h"
+#include <settings/CommonAppSettings.h>
 #include <cmath>
 
 QString& normalizeLine(QString& line)
@@ -68,8 +68,8 @@ FontAdapter* FontAdapter::instanse()
 {
 	if (_instanse == Q_NULLPTR)
 	{
-		_instanse = new FontAdapter(AppSettings->fontMinHeight, AppSettings->fontMaxHeight,
-			AppSettings->fontPercent);
+		_instanse = new FontAdapter(CommonSettings->fontMinHeight, CommonSettings->fontMaxHeight,
+			CommonSettings->fontPercent);
 	}
 	return _instanse;
 }
