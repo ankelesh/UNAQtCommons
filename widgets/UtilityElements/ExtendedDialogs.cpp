@@ -39,12 +39,12 @@ LoginPassDialog::LoginPassDialog(QString& login_link, QString& pass_link, QWidge
 	loginField->setText(loginLink);
 	passField->setText(passLink);
 	passField->setEchoMode(QLineEdit::Password);
-	okButton->setIcon(QIcon(":/res/submit.png"));
+	okButton->setIcon(QIcon(":/resources/submit"));
 	okButton->setStyleSheet(COMMIT_BUTTONS_STYLESHEET);
 	okButton->setFixedHeight(calculateAdaptiveHeight(0.08));
 	cancelButton->setFixedHeight(calculateAdaptiveHeight(0.08));
 	cancelButton->setStyleSheet(BACK_BUTTONS_STYLESHEET);
-	cancelButton->setIcon(QIcon(":/res/back.png"));
+	cancelButton->setIcon(QIcon(":/resources/back"));
 	setStyleSheet("QDialog {border: 1px solid black;}");
 #ifdef Q_OS_ANDROID
 	setFixedWidth(calculateAdaptiveWidth(0.9));
@@ -155,7 +155,7 @@ ErrorMessageDialog::ErrorMessageDialog(const QString header,
 	}
     errorImage->setFixedHeight(calculateAdaptiveHeight(0.1));
 	errorImage->setFixedWidth(errorImage->pixmap()->width());
-	okButton->setIcon(QIcon(":/res/submit.png"));
+	okButton->setIcon(QIcon(":/resources/submit"));
 	okButton->setText(tr("OK"));
     okButton->setFixedHeight(calculateAdaptiveHeight(0.06));
 	okButton->setStyleSheet(OK_BUTTONS_STYLESHEET);

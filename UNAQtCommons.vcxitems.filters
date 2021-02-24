@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)debug\debugtrace.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)settings\CommonAppSettings.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\DateTimeControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\LabelControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\QuantityControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\StringControl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\Scaling\ScalingUtilities.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\BigButtonsSpinbox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\tty\tty.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\SoundEffectPlayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\Sound\WinCEUnpackWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)barcodeHandling\BarcodeObserver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)consts\DatetimeConstants.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)debug\debugtrace.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)settings\CommonAppSettings.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\abs_control.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\BarcodeControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\ControlTranslator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\DateTimeControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\LabelControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\QuantityControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\ControlsWidgets\StringControl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\abstractNodeInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\parents\inframedWidget.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\Scaling\ScalingUtilities.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\AndroidFileDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\BigButtonsSpinbox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\NullPrinterWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\PrinterWrapperFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\tty\tty.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\androidservicewrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Platform\Android\QBroadcastCatcher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\AbsSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\ModernQtSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\PhononSoundWrapper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\SoundEffectPlayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\Sound\WinCEUnpackWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="resources">
+      <UniqueIdentifier>{aa8f0b3d-ec8e-4e69-a5f0-3c93c973cf03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)resources\add.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\alreadySent.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\arrowstocheck.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\back.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\barchart.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\barcode.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\best.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\camera.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\cameradoc.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\cash.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\cblock.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\check.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\cloud.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\contract.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\cursor.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\deleteData.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\downarrow.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\download.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\editable.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\education_file-512.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\eng.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\exit.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\find.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\find2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\find3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\find4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\forward.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\images.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\info.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\inventory.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\invz.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\key.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\logs.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\minus.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\netDownload.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\netUpload.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\new.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\nodata.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\nodata2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\pen.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\pen2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\pencil.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\pencil2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\phoneglobe.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\plus.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\presentation.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\profile.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\quality.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\rec.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\rec2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\refresh.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\ribon.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\ro.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\ru.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\scanner.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\sent.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\settings.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\settings2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\single.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\split.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\stats.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\stats2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\submit.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\substract.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\suppliers.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\text_files-512.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\time.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\toinput.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\twopages.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\twosimplepages.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\unsent.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\uparrow.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\upload.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\url.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\url2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\viaFile.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\viaNet.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\viaTcp.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\video.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\wifi.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\with.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)resources\without.png">
+      <Filter>resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

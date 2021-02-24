@@ -78,8 +78,8 @@ BigButtonsSpinbox::BigButtonsSpinbox(spintype type, QWidget* parent, double adap
 	}
 	else
 	{
-		buttonUp->setIcon(QIcon(":/res/uparrow.png"));
-		buttonDown->setIcon(QIcon(":/res/downarrow.png"));
+		buttonUp->setIcon(QIcon(":/resources/uparrow"));
+		buttonDown->setIcon(QIcon(":/resources/downarrow"));
 		buttonUp->setMinimumHeight(calculateAdaptiveHeight(adaptH));
 		buttonDown->setMinimumHeight(calculateAdaptiveHeight(adaptH));
 		buttonDown->setFocusPolicy(Qt::NoFocus);
