@@ -321,4 +321,12 @@
       <Filter>resources</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)resources\beep-02.wav">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)resources\beep-08b.wav">
+      <Filter>resources</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

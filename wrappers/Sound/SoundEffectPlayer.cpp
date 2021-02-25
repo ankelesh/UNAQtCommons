@@ -13,8 +13,8 @@
 QStringList _initDSF()
 {
 	QStringList temp;
-    temp << ":/res/beep-08b.wav";
-    temp << ":/res/beep-02.wav";
+    temp << ":/resources/beep8";
+    temp << ":/resources/beep2";
 	return temp;
 }
 

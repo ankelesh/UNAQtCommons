@@ -165,4 +165,8 @@
     <Image Include="$(MSBuildThisFileDirectory)resources\with.png" />
     <Image Include="$(MSBuildThisFileDirectory)resources\without.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)resources\beep-02.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)resources\beep-08b.wav" />
+  </ItemGroup>
 </Project>
