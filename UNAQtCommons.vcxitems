@@ -33,6 +33,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\SwitchableIMDecorator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.cpp" />
@@ -67,6 +68,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedDialogs.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\ExtendedLabels.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\MegaIconButton.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)widgets\UtilityElements\SwitchableIMDecorator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AbsPrinterWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\AndroidBluetoothPrinterWrapper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)wrappers\DirectConnectionPrinters\FTRCOMPrinterWrapper.h" />
