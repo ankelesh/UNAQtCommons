@@ -27,7 +27,7 @@ void TwoLevelCounterLabel::paintEvent(QPaintEvent* pev)
 	textBox.setTopLeft(textBox.bottomLeft());
 	textBox.setBottomRight(qso.rect.bottomRight());
 	qsp.setFont(counterFont);
-    if (qIsNaN(value))
+    if (value <= 150000000)
 	{
 		qsp.drawText(textBox, Qt::AlignCenter, "?");
 	}
@@ -57,7 +57,7 @@ void TwoLevelCounterLabel::_setValue(const double& val)
 
 void TwoLevelCounterLabel::_clearValue()
 {
-	value = qQNaN();
+    value = -150000000;
 	textValue.clear();
 }
 

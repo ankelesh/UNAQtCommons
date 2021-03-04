@@ -3,11 +3,11 @@
 #include "NullPrinterWrapper.h"
 #include "AndroidBluetoothPrinterWrapper.h"
 #include <settings/CommonAppSettings.h>
-
+#include "widgets/utils/GlobalAppSettings.h"
 AbsPrinterWrapper* PrinterWrapperFactory::fabricate(QObject* parent, QString encoding)
 {
 #ifdef FTR_COM
-	return new FTRCOMPrinterWrapper(CommonSettings->printerPortDesignation, CommonSettings->printerPort, parent, encoding);
+    return new FTRCOMPrinterWrapper(AppSettings->printerPortDesignation, AppSettings->printerPort, parent, encoding);
 #endif
 #ifdef Q_OS_ANDROID
     return new AndroidBluetoothPrinterWrapper(CommonSettings->labelPrinterName, 

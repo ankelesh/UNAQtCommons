@@ -560,7 +560,11 @@ void ReturnReactingSpinBox::keyReleaseEvent(QKeyEvent* kev)
 void ReturnReactingSpinBox::focusInEvent(QFocusEvent*e)
 {
 	QSpinBox::focusInEvent(e);
+#ifdef QT_VERSION5X
 	QTimer::singleShot(10, this, &ReturnReactingSpinBox::selectAll);
+#else
+    QTimer::singleShot(10, this, SLOT(selectAll()));
+#endif
 }
 
 ReturnReactingSpinBox::ReturnReactingSpinBox(QWidget* parent)
@@ -593,7 +597,11 @@ void ReturnReactingDoubleSpinBox::keyReleaseEvent(QKeyEvent* kev)
 void ReturnReactingDoubleSpinBox::focusInEvent(QFocusEvent* e)
 {
 	QDoubleSpinBox::focusInEvent(e);
+#ifdef QT_VERSION5X
 	QTimer::singleShot(10, this, &ReturnReactingDoubleSpinBox::selectAll);
+#else
+    QTimer::singleShot(10, this, SLOT(selectAll()));
+#endif
 }
 
 ReturnReactingDoubleSpinBox::ReturnReactingDoubleSpinBox(QWidget* parent)

@@ -1,5 +1,6 @@
 #pragma once
 #include <QLineEdit>
+#ifdef QT_VERSION5X
 #include <QInputMethod>
 #include <QVector>
 
@@ -23,3 +24,5 @@ public slots:
     void setIM(int index);
     void dropIM();
 };
+
+#endif

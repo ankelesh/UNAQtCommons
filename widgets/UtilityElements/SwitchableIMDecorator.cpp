@@ -1,4 +1,5 @@
 #include "SwitchableIMDecorator.h"
+#ifdef QT_VERSION5X
 #include <QApplication>
 void SwitchableIMDecorator::_setupIMH()
 {
@@ -71,3 +72,4 @@ void SwitchableIMDecorator::dropIM()
     currentIndex = 0;
     _setupIMH();
 }
+#endif

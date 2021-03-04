@@ -3,7 +3,10 @@
 #include <QSettings>
 #include <debug/debugtrace.h>
 #include <QDir>
-#include <QException>
+
+#ifndef QStringLiteral
+#define QStringLiteral(A) QString::fromUtf8("" A "" , sizeof(A)-1)
+#endif
 QString rootFilePath =
 #ifdef Q_OS_ANDROID
 "/storage/emulated/0/";
@@ -21,7 +24,7 @@ p_QSettings CommonAppSettings::_getSettingsFile()
 #ifdef DEBUG
 	detrace_METHPERROR("CommonAppSettings::_getSettingsFile", "called non-overloaded call to settings file");
 #endif
-	return Q_NULLPTR;
+    return p_QSettings();
 }
 
 void CommonAppSettings::_save(p_QSettings settings)

@@ -49,10 +49,18 @@ LoginPassDialog::LoginPassDialog(QString& login_link, QString& pass_link, QWidge
 #ifdef Q_OS_ANDROID
 	setFixedWidth(calculateAdaptiveWidth(0.9));
 #endif
-	QObject::connect(okButton, &MegaIconButton::clicked, this, &LoginPassDialog::okPressed);
+
+#ifdef QT_VERSION5X
+    QObject::connect(okButton, &MegaIconButton::clicked, this, &LoginPassDialog::okPressed);
 	QObject::connect(cancelButton, &MegaIconButton::clicked, this, &LoginPassDialog::cancelPressed);
 	QObject::connect(loginField, &QLineEdit::returnPressed, passField, QOverload<>::of(&QLineEdit::setFocus));
 	QObject::connect(passField, &QLineEdit::returnPressed, this, &LoginPassDialog::okPressed);
+#else
+    QObject::connect(okButton, SIGNAL(clicked()), this, SLOT(okPressed()));
+    QObject::connect(cancelButton, SIGNAL(clicked()), this, SLOT(cancelPressed()));
+    QObject::connect(loginField, SIGNAL(returnPressed()), passField, SLOT(setFocus()));
+    QObject::connect(passField, SIGNAL(returnPressed()), this, SLOT(okPressed()));
+#endif
 
 
 }
@@ -171,10 +179,17 @@ ErrorMessageDialog::ErrorMessageDialog(const QString header,
 	infoButton->setCheckable(true);
 	infoButton->setChecked(false);
 	infoButton->setStyleSheet(CHECKED_BUTTONS_STYLESHEET);
+#ifdef QT_VERSION5X
 	QObject::connect(infoButton, &MegaIconButton::toggled, this, &ErrorMessageDialog::infoToggled);
 	QObject::connect(okButton, &MegaIconButton::clicked, this, &ErrorMessageDialog::okPressed);
 	QObject::connect(quitButton, &MegaIconButton::clicked, this, &ErrorMessageDialog::okPressed);
 	QObject::connect(errorMessage, &ClickableLabel::clicked, infoButton, &QPushButton::toggle);
+#else
+    QObject::connect(infoButton, SIGNAL(toggled()), this, SLOT(infoToggled()));
+    QObject::connect(okButton, SIGNAL(clicked()), this, SLOT(okPressed()));
+    QObject::connect(quitButton, SIGNAL(clicked()), this, SLOT(okPressed()));
+    QObject::connect(errorMessage, SIGNAL(clicked()), infoButton, SLOT(toggle()));
+#endif
 }
 
 void ErrorMessageDialog::showErrorInfo(const QString& header, const QString& message, bool showStack, const QString stack, const QIcon& errorIcon)

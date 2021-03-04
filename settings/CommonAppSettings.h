@@ -2,16 +2,39 @@
 #include <QtCore/QString>
 #include <QtCore/QTranslator>
 #include <QByteArray>
+#ifdef QT_VERSION5X
 #include <QException>
+#else
+#include <exception>
+#endif
 #include <QSharedPointer>
 #define CommonSettings CommonAppSettings::instanse()
 extern QString rootFilePath;
 class QSettings;
-class SettingsInstanceException : public QException
+class SettingsInstanceException :
+        public
+        #ifdef QT_VERSION5X
+        QException
+        #else
+        std::exception
+        #endif
 {
 public:
-	void raise() const override { throw* this; }
-	SettingsInstanceException* clone() const override { return new SettingsInstanceException(*this); }
+    void raise() const
+#ifdef QT_VERSION5X
+    override
+#endif
+    { throw* this; }
+    virtual const char * what() const
+#ifndef QT_VERSION5X
+    override
+#endif
+    {return "no settings object provided";}
+    SettingsInstanceException* clone() const
+#ifdef QT_VERSION5X
+    override
+#endif
+    { return new SettingsInstanceException(*this); }
 };
 
 typedef QSharedPointer<QSettings> p_QSettings;
