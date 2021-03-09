@@ -25,7 +25,7 @@ public:
     override
 #endif
     { throw* this; }
-    virtual const char * what() const
+    virtual const char * what() const noexcept override
 #ifndef QT_VERSION5X
     override
 #endif
