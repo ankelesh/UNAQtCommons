@@ -57,6 +57,28 @@ public:
 signals:
 	void clicked(bool left = true);
 };
+
+class MultistateClickableCounterLabel : public ClickableTLCounterLabel
+{
+	Q_OBJECT
+protected:
+	int state;
+	QVector<QColor> stateColors;
+	enum defaultStates{OldValue, FreshValue};
+
+	static QVector<QColor> _initBaseStates();
+	virtual void paintEvent(QPaintEvent*) override;
+public:
+	explicit MultistateClickableCounterLabel(QString explanation = QString(), double value = 0.0, QWidget* parent = Q_NULLPTR);
+	explicit MultistateClickableCounterLabel(QVector<QColor> colors, QString explanation = QString(), double value = 0.0, QWidget* parent = Q_NULLPTR);
+
+public slots:;
+	void setFreshValue(double value);
+	void setNotFreshValue(double value);
+	void setValueAndState(double value, int state);
+	void dropState(int state = 0);
+};
+
 class ClickableLabel : public QLabel
 {
 	Q_OBJECT
