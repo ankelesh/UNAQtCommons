@@ -42,7 +42,7 @@ QString FTRCOMPrinterWrapper::_errors() const
 	return errorOutput;
 }
 
-void FTRCOMPrinterWrapper::_print(QString data)
+void FTRCOMPrinterWrapper::_print(QString /*data*/)
 {
 #ifdef FTR_COM
 	if (!printerSocket->isConnected())
@@ -67,7 +67,7 @@ void FTRCOMPrinterWrapper::_print(QString data)
 #endif
 }
 
-FTRCOMPrinterWrapper::FTRCOMPrinterWrapper(QString port, int brate, QObject* parent, QString enc)
+FTRCOMPrinterWrapper::FTRCOMPrinterWrapper(QString /*port*/, int brate, QObject* parent, QString enc)
 	:AbsPrinterWrapper(CEComport, parent, enc), 
 #ifdef FTR_COM
 	printerSocket(new TTY()),

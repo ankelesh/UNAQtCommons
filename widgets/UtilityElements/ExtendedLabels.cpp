@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <cmath>
 
-void TwoLevelCounterLabel::paintEvent(QPaintEvent* pev)
+void TwoLevelCounterLabel::paintEvent(QPaintEvent* /*pev*/)
 {
 	QStylePainter qsp(this);
 	QStyleOption qso;

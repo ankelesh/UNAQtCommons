@@ -9,7 +9,7 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QBoxLayout>
-
+#include <widgets/Scaling/ScalingUtilities.h>
 void AndroidFileDialog::pathChanged(QString new_path)
 {
     mainView->setCurrentIndex(model->index(new_path));
@@ -99,7 +99,7 @@ AndroidFileDialog::AndroidFileDialog(QString path, int target, QWidget *parent)
     mainView->setExpanded(model->index(path),true);
     backButton->setDefault(false);
     okButton->setDefault(false);
-    setMinimumSize(QSize(900,900));
+    setMinimumSize(calculateAdaptiveSize(0.9));
     mainView->hideColumn(1);
     mainView->hideColumn(2);
     mainView->hideColumn(3);

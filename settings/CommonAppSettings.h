@@ -26,9 +26,15 @@ public:
 #endif
     { throw* this; }
     virtual const char * what() const
+<<<<<<< Updated upstream
 #ifndef QT_VERSION5X
     override
+=======
+#ifdef QT_VERSION5X
+    noexcept
+>>>>>>> Stashed changes
 #endif
+    override
     {return "no settings object provided";}
     SettingsInstanceException* clone() const
 #ifdef QT_VERSION5X

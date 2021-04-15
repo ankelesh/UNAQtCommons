@@ -485,6 +485,8 @@ void BigButtonsSpinbox::setPrecision(int prec)
 	}
 	break;
 	}
+    default:
+        break;
 	}
 }
 

@@ -35,7 +35,6 @@ void ModernQtSoundWrapper::_play(int which)
 {
 	if (which >= 0 && which < effects.count())
 	{
-		int st = effects.at(which)->status();
         effects[which]->setVolume(CommonSettings->notificationsVolume);
 		effects.at(which)->play();
 	}
