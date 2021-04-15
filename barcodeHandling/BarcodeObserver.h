@@ -10,8 +10,8 @@ class BarcodeObserver : public QObject
 {
 	Q_OBJECT
 protected:
-	QKeySequence prefix;
-	QKeySequence suffix;
+    QString prefix;
+    QString suffix;
 	QString buffer;
 	bool prefixFound;
 
