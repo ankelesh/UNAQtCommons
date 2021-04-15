@@ -10,16 +10,9 @@
 
 
 
-QKeySequence _initiateSequence(QChar ch)
+QString _initiateSequence(QChar ch)
 {
-	if (ch.isLetterOrNumber())
-		return QKeySequence(ch);
-	if (ch == '\n')
-	{
-        return QKeySequence(Qt::Key_Return);
-	}
-	else
-        return QKeySequence(Qt::Key((ch.unicode())));
+    return QString(ch);
 }
 
 
@@ -60,10 +53,10 @@ bool BarcodeObserver::_testPressureForBarcode(QKeyEvent * ev, QObject* /*target*
 {
 	if (prefixFound)
 	{
-		if (ev->text().count() > 0)
+        QString etext = ev->text();
+        if (ev->text() == suffix)
 		{
-			if (ev->key() == suffix[0])
-			{
+
 				prefixFound = false;
                 _handleBarcodeCatch(buffer);
 				emit suffixCaught();
@@ -77,20 +70,18 @@ bool BarcodeObserver::_testPressureForBarcode(QKeyEvent * ev, QObject* /*target*
 				ev->accept();
 				return true;
 			}
-		}
 	}
 	else
-	{
-		if (ev->text().count() > 0)
-		{
-			if (ev->text().at(0) == prefix[0])
+    {
+        QString etext = ev->text();
+            if (ev->text() == prefix)
 			{
 				prefixFound = true;
 				ev->accept();
 				emit prefixCaught();
 				return true;
 			}
-		}
+
 	}
 	return false;
 }
@@ -147,31 +138,31 @@ bool BarcodeObserver::_testNumberReleased(QKeyEvent* ev)
 		emit numberPressed(0);
 		break;
 	case Qt::Key_1:
-		emit numberPressed(0);
+        emit numberPressed(1);
 		break;
 	case Qt::Key_2:
-		emit numberPressed(0);
+        emit numberPressed(2);
 		break;
 	case Qt::Key_3:
-		emit numberPressed(0);
+        emit numberPressed(3);
 		break;
 	case Qt::Key_4:
-		emit numberPressed(0);
+        emit numberPressed(4);
 		break;
 	case Qt::Key_5:
-		emit numberPressed(0);
+        emit numberPressed(5);
 		break;
 	case Qt::Key_6:
-		emit numberPressed(0);
+        emit numberPressed(6);
 		break;
 	case Qt::Key_7:
-		emit numberPressed(0);
+        emit numberPressed(7);
 		break;
 	case Qt::Key_8:
-		emit numberPressed(0);
+        emit numberPressed(8);
 		break;
 	case Qt::Key_9:
-		emit numberPressed(0);
+        emit numberPressed(9);
 		break;
 	default:
 		return false;
