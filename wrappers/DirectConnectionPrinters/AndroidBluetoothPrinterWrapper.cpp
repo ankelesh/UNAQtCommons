@@ -17,29 +17,29 @@ QString AndroidBluetoothPrinterWrapper::_makeErrorDescription(int desc)
 #ifdef Q_OS_ANDROID
     switch (desc)
     {
-    case QBluetoothSocket::ConnectionRefusedError:
+    case QAbstractSocket::ConnectionRefusedError:
         return tr("ConnectionRefusedError");
     case QBluetoothSocket::RemoteHostClosedError:
-        return tr("RemoteHostClosedError"):
-    case QBluetoothSocket::HostNotFoundError:
+        return tr("RemoteHostClosedError");
+    case QAbstractSocket::HostNotFoundError:
         return tr("HostNotFoundError");
-    case QBluetoothSocket::SocketAccessError:
+    case QAbstractSocket::SocketAccessError:
         return tr("SocketAccessError");
-    case QBluetoothSocket::SocketResourceError:
+    case QAbstractSocket::SocketResourceError:
         return tr("SocketResourceError");
-    case QBluetoothSocket::SocketTimeoutError:
+    case QAbstractSocket::SocketTimeoutError:
         return tr("SocketTimeoutError");
-    case QBluetoothSocket::DatagramTooLargeError:
+    case QAbstractSocket::DatagramTooLargeError:
         return tr("DatagramTooLargeError");
     case QBluetoothSocket::NetworkError:
         return tr("NetworkError");
-    case QBluetoothSocket::AddressInUseError:
+    case QAbstractSocket::AddressInUseError:
         return tr("AddressInUseError");
-    case QBluetoothSocket::SocketAddressNotAvailableError:
+    case QAbstractSocket::SocketAddressNotAvailableError:
         return tr("SocketAddressNotAvailableError");
-    case QBluetoothSocket::UnsupportedSocketOperationError:
+    case QAbstractSocket::UnsupportedSocketOperationError:
         return tr("UnsupportedSocketOperationError");
-    case QBluetoothSocket::UnfinishedSocketOperationError:
+    case QAbstractSocket::UnfinishedSocketOperationError:
         return tr("UnfinishedSocketOperationError");
     case QBluetoothSocket::OperationError:
         return tr("OperationError");
