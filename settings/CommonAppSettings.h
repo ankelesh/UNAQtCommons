@@ -28,7 +28,7 @@ public:
     virtual const char * what() const 
 #ifdef QT_VERSION5X
     noexcept
-	override
+    override
 #endif
     {return "no settings object provided";}
     SettingsInstanceException* clone() const

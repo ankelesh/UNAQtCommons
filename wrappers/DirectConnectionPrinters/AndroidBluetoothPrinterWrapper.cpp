@@ -242,9 +242,10 @@ void AndroidBluetoothPrinterWrapper::connectionError(QBluetoothSocket::SocketErr
     }
 }
 
-void AndroidBluetoothPrinterWrapper::devf_error(QBluetoothServiceDiscoveryAgent::Error err)
+void AndroidBluetoothPrinterWrapper::devf_error(QBluetoothServiceDiscoveryAgent::Error /*err*/)
 {
-    emit error(tr("Device discovery failed: ") + serviceDiscAgent->errorString());
+    emit error("Device discovery failed: " + serviceDiscAgent->errorString());
+    blocker = true;
 }
 
 void AndroidBluetoothPrinterWrapper::devf_cancel()

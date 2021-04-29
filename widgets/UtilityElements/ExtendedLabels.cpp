@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <cmath>
 
-void TwoLevelCounterLabel::paintEvent(QPaintEvent* pev)
+void TwoLevelCounterLabel::paintEvent(QPaintEvent* /*pev*/)
 {
 	QStylePainter qsp(this);
 	QStyleOption qso;
@@ -27,7 +27,7 @@ void TwoLevelCounterLabel::paintEvent(QPaintEvent* pev)
 	textBox.setTopLeft(textBox.bottomLeft());
 	textBox.setBottomRight(qso.rect.bottomRight());
 	qsp.setFont(counterFont);
-    if (value <= 150000000)
+    if (value <= -150000000)
 	{
 		qsp.drawText(textBox, Qt::AlignCenter, "?");
 	}
@@ -207,4 +207,62 @@ void labels_private::abs_counter_label::clearValue()
 {
 	_clearValue();
 	update();
+}
+
+QVector<QColor> MultistateClickableCounterLabel::_initBaseStates()
+{
+	QVector<QColor> temp;
+	temp.push_back(QColor(245, 240, 110));
+	temp.push_back(QColor(141, 235, 117));
+	return temp;
+}
+
+void MultistateClickableCounterLabel::paintEvent(QPaintEvent* pev)
+{
+	ClickableTLCounterLabel::paintEvent(pev);
+	QRect counterRect = rect();
+	QStylePainter sp(this);
+	sp.setBrush(stateColors.at(state));
+	sp.setOpacity(0.3);
+	sp.drawRect(counterRect);
+}
+
+
+
+MultistateClickableCounterLabel::MultistateClickableCounterLabel(QString explanation, double value, QWidget* parent)
+	: ClickableTLCounterLabel(explanation, value, parent), stateColors(_initBaseStates()), state(OldValue)
+{
+}
+
+MultistateClickableCounterLabel::MultistateClickableCounterLabel(QVector<QColor> colors, QString explanation, double value, QWidget* parent)
+	: ClickableTLCounterLabel(explanation, value, parent), stateColors(colors), state(OldValue)
+{
+	if (colors.isEmpty())
+		stateColors = _initBaseStates();
+}
+
+void MultistateClickableCounterLabel::setFreshValue(double value)
+{
+	setValueAndState(value, state + 1);
+}
+
+void MultistateClickableCounterLabel::setNotFreshValue(double value)
+{
+	setValueAndState(value, state - 1);
+}
+
+void MultistateClickableCounterLabel::setValueAndState(double value, int new_state)
+{
+	if (new_state >= 0 && new_state < stateColors.count())
+		state = new_state;
+	setValue(value);
+}
+
+void MultistateClickableCounterLabel::dropState(int new_state)
+{
+	if (new_state >= 0 && new_state < stateColors.count())
+	{
+		state = new_state;
+		update();
+	}
 }

@@ -43,7 +43,7 @@ void inframedWidget::stopListeningKeyboard()
 {
 	if (listeningKeyboard)
 	{
-		bool a = BarcodeObs->disconnect(this);
+        BarcodeObs->disconnect(this);
 		listeningKeyboard = false;
 		BarcodeObs->stopNumberCatching();
 	}
