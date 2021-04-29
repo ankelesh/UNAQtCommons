@@ -11,6 +11,48 @@
 #include <debug/debugtrace.h>
 #endif
 #include <settings/CommonAppSettings.h>
+
+QString AndroidBluetoothPrinterWrapper::_makeErrorDescription(int desc)
+{
+#ifdef Q_OS_ANDROID
+    switch (desc)
+    {
+    case QBluetoothSocket::ConnectionRefusedError:
+        return tr("ConnectionRefusedError");
+    case QBluetoothSocket::RemoteHostClosedError:
+        return tr("RemoteHostClosedError"):
+    case QBluetoothSocket::HostNotFoundError:
+        return tr("HostNotFoundError");
+    case QBluetoothSocket::SocketAccessError:
+        return tr("SocketAccessError");
+    case QBluetoothSocket::SocketResourceError:
+        return tr("SocketResourceError");
+    case QBluetoothSocket::SocketTimeoutError:
+        return tr("SocketTimeoutError");
+    case QBluetoothSocket::DatagramTooLargeError:
+        return tr("DatagramTooLargeError");
+    case QBluetoothSocket::NetworkError:
+        return tr("NetworkError");
+    case QBluetoothSocket::AddressInUseError:
+        return tr("AddressInUseError");
+    case QBluetoothSocket::SocketAddressNotAvailableError:
+        return tr("SocketAddressNotAvailableError");
+    case QBluetoothSocket::UnsupportedSocketOperationError:
+        return tr("UnsupportedSocketOperationError");
+    case QBluetoothSocket::UnfinishedSocketOperationError:
+        return tr("UnfinishedSocketOperationError");
+    case QBluetoothSocket::OperationError:
+        return tr("OperationError");
+    case QBluetoothSocket::UnknownSocketError:
+        return tr("UnknownSocketError");
+    default:
+        return QString();
+    }
+#else
+    return QString();
+#endif
+}
+
 bool AndroidBluetoothPrinterWrapper::_isValid() const
 {
 #ifdef Q_OS_ANDROID
@@ -190,7 +232,7 @@ void AndroidBluetoothPrinterWrapper::connectionError(QBluetoothSocket::SocketErr
 #ifdef DEBUG
     detrace_METHPERROR("AndroidBluetoothPrinterWrappper::_openConnection", "error code: " << err);
 #endif
-    errorOutput = tr("error opening connection with code:") + QString::number(err);
+    errorOutput = tr("error opening printer connection: ") + _makeErrorDescription(err);
     emit error(errorOutput);
     if (connectionMode == LAST)
     {
@@ -202,7 +244,7 @@ void AndroidBluetoothPrinterWrapper::connectionError(QBluetoothSocket::SocketErr
 
 void AndroidBluetoothPrinterWrapper::devf_error(QBluetoothServiceDiscoveryAgent::Error err)
 {
-    emit error("Device discovery failed: " + serviceDiscAgent->errorString());
+    emit error(tr("Device discovery failed: ") + serviceDiscAgent->errorString());
 }
 
 void AndroidBluetoothPrinterWrapper::devf_cancel()
@@ -267,7 +309,7 @@ void AndroidBluetoothPrinterWrapper::_establishConnection()
 #endif
     }
 #else
-    errorOutput = tr("no a/bluetooth support on this os");
+    errorOutput = tr("no bluetooth support on this os");
     emit error(errorOutput);
 #ifdef DEBUG
     detrace_METHPERROR("AndroidBluetoothPrinterWrappper", "wrong OS");

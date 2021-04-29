@@ -38,6 +38,8 @@ protected:
 	virtual void _establishConnection() override;
 	void _clearAndLaunchDiscovery();
 	void _openConnection();
+
+	QString _makeErrorDescription(int desc);
 public:
 	AndroidBluetoothPrinterWrapper(QString device_name, QObject* parent = Q_NULLPTR, QString encoding = QStringLiteral("CP1251"));
 	AndroidBluetoothPrinterWrapper(QString device_name, QString lmac, QString luuid, QObject* parent = Q_NULLPTR, QString encoding = QStringLiteral("CP1251"));
