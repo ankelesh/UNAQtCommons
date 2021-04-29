@@ -78,7 +78,7 @@ void CommonAppSettings::_load(p_QSettings settings)
 	settings->beginGroup(QStringLiteral("common"));
 	language = settings->value("language", "English").toString();
 	scanPrefix = settings->value("scanPrefix", QVariant(int('$'))).toInt();
-	scanSuffix = settings->value("scanSuffix", QVariant(int('\n'))).toInt();
+    scanSuffix = settings->value("scanSuffix", QVariant(int('\r'))).toInt();
 	fontMaxHeight = settings->value("fontMaxHeight", QVariant(30)).toInt();
 	fontMinHeight = settings->value("fontMinHeight", QVariant(10)).toInt();
 	fontPercent = settings->value("fontPercent", QVariant(0.03)).toDouble();

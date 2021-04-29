@@ -42,9 +42,10 @@ QString FTRCOMPrinterWrapper::_errors() const
 	return errorOutput;
 }
 
-void FTRCOMPrinterWrapper::_print(QString /*data*/)
-{
+
 #ifdef FTR_COM
+void FTRCOMPrinterWrapper::_print(QString data)
+{
 	if (!printerSocket->isConnected())
 	{
 		_retryOpeningConnection();
@@ -64,6 +65,9 @@ void FTRCOMPrinterWrapper::_print(QString /*data*/)
 		detrace_METHEXPL("fail: " << printerSocket->getErrors());
 #endif
 	}
+#else
+void FTRCOMPrinterWrapper::_print(QString /*data*/)
+{
 #endif
 }
 
