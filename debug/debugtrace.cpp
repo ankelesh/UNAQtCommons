@@ -39,7 +39,7 @@ struct detracestream
 	{
 		switch (mode)
 		{
-        case detr_supply::toall:
+		case detr_supply::all:
             ostream << endl;
             sout << endl;
 			break;

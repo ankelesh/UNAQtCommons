@@ -145,12 +145,13 @@ ErrorMessageDialog::ErrorMessageDialog(const QString header,
     setStyleSheet("QDialog {border: 2px solid black;}");
     setFont(GENERAL_FONT);
 	topic->setText(header);
+	topic->setWordWrap(true);
 	quitButton->setIcon(style()->standardIcon(QStyle::StandardPixmap::SP_DialogCloseButton));
     quitButton->setFixedSize(calculateAdaptiveSize(0.06, 0.2));
 	topic->setFixedHeight(quitButton->height());
 
 	errorMessage->setText(text);
-	
+	errorMessage->setWordWrap(true);
 	if (icon.isNull())
 	{
         errorImage->setPixmap(style()->standardIcon(
