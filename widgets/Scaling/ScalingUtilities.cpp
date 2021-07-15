@@ -41,7 +41,7 @@ void FontAdapter::_setCharPerWidth()
 	int width = calculateAdaptiveWidth(0.95);
 	if (fm.averageCharWidth() == 0 || width == 0)
 		averageCharPerWidth = 10;
-	averageCharPerWidth = int(width / fm.averageCharWidth());
+    averageCharPerWidth = int(width / fm.averageCharWidth()) - 5;
 }
 
 FontAdapter::FontAdapter(int mh, int mah, double mfp)

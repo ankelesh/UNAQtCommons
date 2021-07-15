@@ -43,7 +43,10 @@ void inframedWidget::stopListeningKeyboard()
 {
 	if (listeningKeyboard)
 	{
-        BarcodeObs->disconnect(this);
+        QObject::disconnect(BarcodeObs, &BarcodeObserver::escapeCaught, this, &inframedWidget::backReaction);
+        QObject::disconnect(BarcodeObs, &BarcodeObserver::numberPressed, this, &inframedWidget::numberReaction);
+        QObject::disconnect(BarcodeObs, &BarcodeObserver::arrowCaught, this, &inframedWidget::arrowReaction);
+        QObject::disconnect(BarcodeObs, &BarcodeObserver::returnCaught, this, &inframedWidget::returnReaction);
 		listeningKeyboard = false;
 		BarcodeObs->stopNumberCatching();
 	}
